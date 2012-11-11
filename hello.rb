@@ -16,12 +16,14 @@ class Mp3link
     property :created_at, DateTime
 end
 
-#configure :development do
+configure :production do
+  DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
+end
+
+configure :development do
 #  DataMapper.setup(:default, 'sqlite3://mp3links.sqlite3')
-#end
-#configure :test do
   DataMapper.setup(:default, 'sqlite::memory:')
-#end
+end
 DataMapper.finalize
 
 Mp3link.auto_upgrade!
