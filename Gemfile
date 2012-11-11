@@ -12,6 +12,5 @@ gem 'dm-sqlite-adapter', :groups => [:development, :test]
 group :production do
   # gems specifically for Heroku go here
   gem "pg"
-  gem 'do_postgres'
   gem 'dm-postgres-adapter'
 end

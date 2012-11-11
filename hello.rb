@@ -17,12 +17,10 @@ class Mp3link
 end
 
 configure :production do
-  p 'production .......'
   DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
 end
 
 configure :development do
-  p 'development ........'
 #  DataMapper.setup(:default, 'sqlite3://mp3links.sqlite3')
   DataMapper.setup(:default, 'sqlite::memory:')
 end

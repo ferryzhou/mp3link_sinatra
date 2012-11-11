@@ -81,7 +81,6 @@ DEPENDENCIES
   data_mapper
   dm-postgres-adapter
   dm-sqlite-adapter
-  do_postgres
   hpricot
   pg
   sinatra
